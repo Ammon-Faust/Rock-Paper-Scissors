@@ -19,6 +19,29 @@
                     return 'SCISSORS'
             }
         }
+        //User input for game with win/lose conditions
+        function round(playerSelection, computerSelection) {
+            if (playerSelection === computerSelection) {
+                return `It's A Tie`
+            }
+            if (
+                (playerSelection === 'ROCK' && computerSelection === 'SCISSORS') ||
+                (playerSelection === 'PAPER' && computerSelection === 'ROCK') ||
+                (playerSelection === 'SCISSORS' && computerSelection === 'PAPER')
+            ) {
+                return 'You Win'
+            }
+            if (
+                (computerSelection === 'ROCK' && playerSelection === 'SCISSORS') ||
+                (computerSelection === 'PAPER' && playerSelection=== 'ROCK') ||
+                (computerSelection === 'SCISSORS' && playerSelection === 'PAPER')
+            ) {
+                return 'You Lose'
+            }
+        }
+        const playerSelection = 'ROCK';
+        const computerSelection = getComputerChoice();
+        console.log(round(playerSelection, computerSelection));
     </script>
 </body>
 </html>
