@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Computer's random choice for game
+        function getComputerChoice() {
+            let randomNumber = Math.floor(Math.random() * 3)
+            switch (randomNumber) {
+                case  0:
+                    return 'ROCK'
+                case 1:
+                    return 'PAPER'
+                case 2:
+                    return 'SCISSORS'
+            }
+        }
+    </script>
+</body>
+</html>
