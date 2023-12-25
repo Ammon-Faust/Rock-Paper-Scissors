@@ -15,6 +15,7 @@
         let computerscore = 0;
 
         function round(playerSelection, computerSelection) {
+            console.log(playerSelection, computerSelection)
             if (playerSelection === computerSelection) {
                 return `It's A Tie`;
             }
@@ -75,4 +76,10 @@
 
 
 
-const Button = document.getElementById("rock").addEventListener("click", round)
+const rockButton = document.getElementById("rock");
+const paperButton = document.getElementById("paper");
+const scissorsButton = document.getElementById("scissors");
+
+rockButton.addEventListener("click", () => round('ROCK'));
+paperButton.addEventListener("click", () => round('PAPER'));
+scissorsButton.addEventListener("click", () => round('SCISSORS'));
