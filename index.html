@@ -3,81 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <script>
-        //Computer's random choice for game
-        function getComputerChoice() {
-            let randomNumber = Math.floor(Math.random() * 3)
-            switch (randomNumber) {
-                case  0:
-                    return 'ROCK'
-                case 1:
-                    return 'PAPER'
-                case 2:
-                    return 'SCISSORS'
-            }
-        }
-        //User input for a round with win/lose conditions
-        let playerscore = 0;
-        let computerscore = 0;
-
-        function round(playerSelection, computerSelection) {
-            if (playerSelection === computerSelection) {
-                return `It's A Tie`;
-            }
-            if (
-                (playerSelection === 'ROCK' && computerSelection === 'SCISSORS') ||
-                (playerSelection === 'PAPER' && computerSelection === 'ROCK') ||
-                (playerSelection === 'SCISSORS' && computerSelection === 'PAPER')
-            ) {
-                playerscore ++;
-                return 'You Win';
-            }
-            if (
-                (computerSelection === 'ROCK' && playerSelection === 'SCISSORS') ||
-                (computerSelection === 'PAPER' && playerSelection=== 'ROCK') ||
-                (computerSelection === 'SCISSORS' && playerSelection === 'PAPER')
-            ) {
-                computerscore ++;
-                return 'You Lose';
-            }
-        }
-
-        //Scoreboard up to 5
-        function gamescore() {
-            if (playerscore >= 5 && computerscore < 5) {
-                console.log("You win!")
-            } else {
-                console.log("You lose")
-            }
-        }
-
-        //Game function to add score
-        function game() {
-            for (let i = 0; i < 5; i++) {
-                const playerSelection = prompt(
-                    "Rock, Paper, Or Scissors "
-                ).toUpperCase();
-                console.log("You choose " + playerSelection);
-
-                if (["ROCK", "PAPER", "SCISSORS"].includes(playerSelection)) {
-                    const computerSelection = getComputerChoice();
-                    console.log("Computer choose " + computerSelection);
-                    console.log(round(playerSelection, computerSelection));
-                } else {
-                    console.log("Invalid Input, please choose rock, paper or scissors.");
-                }
-            }
-
-            gamescore();
-        }
-
-        game();
-
-        console.log(round());
-        
-    </script>
+    <div class="header">
+        <h1>Rock Paper Scissors</h1>
+    </div>
+    <div class="container">
+        <h2>Choose:</h2>
+        <h3>First to 5 points wins!!!</h3>
+    </div>
+    <div class="content">
+        <div class="choices">
+            <button onclick="playGame('rock')">🪨</button>
+            <button onclick="playGame('paper')">📄</button>
+            <button onclick="playGame('scissors')">✂️</button>
+        </div>
+        <div class="outcome">
+            <div id="playerDisplay">Player:</div>
+            <div id="computerDisplay">Computer:</div>
+            <div id="finalResult"></div>
+        </div>
+        <div class="score">
+            <div class="scoreDisplay"> Player Score:
+                <span id="playerScoreDisplay">0</span>
+            </div>
+            <div class="scoreDisplay"> Computer Score:
+                <span id="computerScoreDisplay">0</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
