@@ -49,6 +49,7 @@ button {
 
 
 .buttons button:hover {
+    cursor: pointer;
     background-color: #cfcece; /* Lighten on hover */
   }
   
