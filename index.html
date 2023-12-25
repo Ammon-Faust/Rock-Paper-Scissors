@@ -15,14 +15,15 @@
         <h3>First to 5 points wins!!!</h3>
     </div>
     <div class="content">
-        <div class="buttons">
-            <button id="rock">🪨</button>
-            <button id="paper">📄</button>
-            <button id="scissors">✂️</button>
+        <div class="choices">
+            <button onclick="playGame('rock')">🪨</button>
+            <button onclick="playGame('paper')">📄</button>
+            <button onclick="playGame('scissors')">✂️</button>
         </div>
         <div class="scoreboard">
-            <p class="playerscore">Player Score:</p>
-            <p class="computerscore">Computer Score:</p>
+            <p class="playerScore">Player Score:</p>
+            <p class="computerScore">Computer Score:</p>
+            <p class="finalResult"></p>
         </div>
     </div>
     <script src="script.js"></script>

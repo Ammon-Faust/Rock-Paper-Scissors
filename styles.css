@@ -33,7 +33,7 @@ body {
     flex-direction: column;
 }
 
-.buttons {
+.choices {
     display: flex;
     gap: 60px;
     padding-top: 50px;
@@ -48,12 +48,12 @@ button {
 }
 
 
-.buttons button:hover {
+.choices button:hover {
     cursor: pointer;
     background-color: #cfcece; /* Lighten on hover */
   }
   
-.buttons button:active {
+.choices button:active {
     background-color: #afafaf; /* Darken on click */
   }
 
