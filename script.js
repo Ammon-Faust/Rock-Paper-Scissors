@@ -47,4 +47,17 @@ function playGame(playerChoice){
             computerScoreDisplay.textContent = computerScore;
             break;
     }
+    if (playerScore === 5 || computerScore === 5) {
+        const winner = playerScore === 5 ? "Player" : "Computer";
+        finalResult.textContent = `Game Over! ${winner} wins!`;
+    
+        if (confirm("Play again?")) {
+          playerScore = 0;
+          computerScore = 0;
+          playerScoreDisplay.textContent = playerScore;
+          computerScoreDisplay.textContent = computerScore;
+          finalResult.textContent = "Choose your move!";
+        }
+      }
+    
 }
