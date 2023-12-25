@@ -47,3 +47,10 @@ button {
 }
 
 
+.buttons button:hover {
+    background-color: #cfcece; /* Lighten on hover */
+  }
+  
+  .buttons button:active {
+    background-color: #afafaf; /* Darken on click */
+  }
